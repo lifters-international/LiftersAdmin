@@ -1,0 +1,1 @@
+export { default as Auth, setToken, setAuth, logout } from "./auths";
