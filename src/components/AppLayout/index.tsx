@@ -8,7 +8,7 @@ interface AppLayoutProps {
 
 export const AppLayout: FC<AppLayoutProps> = ( { children } ) => {
     return (
-        <div>
+        <div className="AppLayout">
             {children}
         </div>
     );

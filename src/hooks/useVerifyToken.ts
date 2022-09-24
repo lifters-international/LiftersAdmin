@@ -19,7 +19,7 @@ export const useVerifyToken = (token: string) => {
             const resp = await fetchGraphQl(isLoggedInMutation, { token });
 
             if (resp.data) {
-                setVerifyTokenState({ loading: false, error: false, loggedIn: resp.data.isLoggedIn });
+                setVerifyTokenState({ loading: false, error: false, loggedIn: resp.data.isAdminLoggedIn });
             } else {
                 setVerifyTokenState({ loading: false, error: true, loggedIn: false });
             }

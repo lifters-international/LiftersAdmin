@@ -13,7 +13,7 @@ export const LoggedInLayout: FC<LogInRequiredProps> = ({ children }) => {
     const { token } = useSelector((state: any) => state.Auth);
     const { loading, error, loggedIn } = useVerifyToken(token);
 
-    if (loading) <AppLoading />;
+    if (loading) return <AppLoading />;
 
     if ( error || !loggedIn) {
         return <Navigate to="/login" />;

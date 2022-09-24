@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 
-import { LoggedInLayout, NotFound404 } from './components';
+import { LoggedInLayout, NotFound404, Register, Login } from './components';
 
 const App: React.FC = () => {
     return (
@@ -19,15 +19,11 @@ const App: React.FC = () => {
                 )} />
 
                 <Route path="/login" element={(
-                    <div>
-                        <h1>Login</h1>
-                    </div>
+                    <Login />
                 )} />
 
                 <Route path="/register" element={(
-                    <div>
-                        <h1>Register</h1>
-                    </div>
+                    <Register />
                 )} />
 
                 <Route path="*" element={<NotFound404 />} />
