@@ -6,6 +6,8 @@ export * from "./AppLoading";
 
 export * from "./NotFound404";
 
+export * from "./Home";
+
 export * from "./Register";
 
 export * from "./LogIn";
