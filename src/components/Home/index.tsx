@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { LoggedInLayout } from "../LoggedInLayout";
 
+import { CreateAdminView } from "./CreateAdminView";
+import { CreateFoodView } from "./CreateFoodView";
+import { HomeView } from "./HomeView";
+
+import "./index.css"
+
 export const Home: React.FC = () => {
+    const [ currentView, setCurrentView ] = useState("Home");
+
     return (
         <LoggedInLayout>
-            <div>
-                <h1>Home</h1>
+            <div className="header">
+                <h1 className="header-title" onClick={() => setCurrentView("Home")}>Home</h1>
 
-                <div>
-                    <button type="button">Create Admin</button>
-                    <button type="button">Food</button>
-                    <button  type="button">LogOut</button>
+                <div className="header-content">
+                    <button type="button" className="header-content-button" onClick={() => setCurrentView("Create Admin")}>
+                        Create Admin
+                    </button>
+                    <button type="button" className="header-content-button" onClick={() => setCurrentView("Create Food")}>
+                        Create Food
+                    </button>
+                    <button  type="button" className="header-content-button">
+                        LogOut
+                    </button>
                 </div>
             </div>
+
+            {
+                currentView === "Home" ? (
+                    <HomeView />
+                ) : currentView === "Create Admin" ? (
+                    <CreateAdminView />
+                ) : currentView === "Create Food" ? (
+                    <CreateFoodView />
+                ) : null
+
+            }
         </LoggedInLayout>
     );
 }

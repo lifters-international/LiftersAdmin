@@ -55,7 +55,7 @@ export const Register: React.FC = () => {
 
     if (error) return (
         <AppLayout>
-            <h1> There was an Error can you please try again. </h1>
+            <h1> There was an Error, can you please try again. </h1>
         </AppLayout>
     );
 
@@ -104,7 +104,7 @@ export const Register: React.FC = () => {
                         <input placeholder="***************" title="apiKey" type="password" onChange={( input ) => setApiKey(input.target.value)}/>
                     </LabelInputDiv>
                 </div>
-                
+
                 <RegisterButton title="Register" onClick={handleSubmit} />
             </div>
         </AppLayout>

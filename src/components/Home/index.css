@@ -1,0 +1,58 @@
+.header {
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 50%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.header-content {
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 50%;
+}
+
+.header-content-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-content-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.selection-label-input-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-label-input-div__select {
+    width: 50%;
+    margin: 1rem;
+}
+
+.scrollView {
+    height: 200px;
+    overflow: auto;
+}
