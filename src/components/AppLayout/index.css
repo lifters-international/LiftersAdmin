@@ -42,7 +42,7 @@ input {
     border: 1px solid gainsboro;
     border-radius: 10px;
     padding: 20px;
-    margin-top: 20%;
+    margin: 20px;
     width: 25%;
     box-shadow: 12px 12px 2px 1px rgba(56, 56, 56, 0.2);
 }
