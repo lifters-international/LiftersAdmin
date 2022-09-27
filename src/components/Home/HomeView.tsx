@@ -3,6 +3,8 @@ import React from 'react';
 import { useGetFood } from "../../hooks";
 import { AppLoading } from '../AppLoading';
 
+import FoodDetails from "./FoodDetails";
+
 export const HomeView: React.FC = () => {
     const { foods, loading, error } = useGetFood();
 
@@ -15,10 +17,7 @@ export const HomeView: React.FC = () => {
             {
                 foods.map( food => (
                     <div key={ `food-${food.id}` } className="FoodView">
-                        <h1>{ food.name }</h1>
-                        <p>Calories: {food.calories}</p>
-                        <p>Serving Size: {food.servingSize.measurment}{food.servingSize.unit}</p>
-                        <p>Protien: {food.nutritionFacts.protein.measurment}{food.nutritionFacts.protein.unit}</p>
+                        <FoodDetails {...food} />    
                     </div>
                 ) )
             }
