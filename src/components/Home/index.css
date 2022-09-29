@@ -41,6 +41,15 @@
     color: #000;
 }
 
+.home {
+    display: grid;
+    grid-template-columns: repeat(9, 200px);
+    height: 99vh;
+    width: 100vw;
+    margin-top: 8vh;
+    overflow-y: auto;
+}
+
 .selection-label-input-div {
     display: flex;
     flex-direction: row;
