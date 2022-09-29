@@ -10,7 +10,7 @@ import { AdminCreateFood } from "../../graphQlQuieries"
 import { AppLoading } from "../AppLoading";
 
 export const CreateFoodView: React.FC = () => {
-    const units = Object.keys(NutritionUnits).filter( unit => isNaN(Number(unit)));
+    const units = Object.values(NutritionUnits).filter( unit => isNaN(Number(unit)));
     const { token } = useSelector((state: any) => state.Auth);
     const [ name, setName ] = useState("");
 
