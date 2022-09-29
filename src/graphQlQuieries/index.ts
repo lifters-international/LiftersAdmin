@@ -11,3 +11,5 @@ export * from "./CreateAdminWithOutApiKey";
 export * from "./AdminCreateFood";
 
 export * from "./GetFood";
+
+export * from "./deleteFood";

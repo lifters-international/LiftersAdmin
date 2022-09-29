@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 import { Food } from "../../utils";
 
-export type Props = {
+import { useDeleteFood } from "../../hooks";
 
+export type Props = {
+    token: string;
 } & Food;
 
-const FoodDetails: React.FC<Props> = ({ id, name, calories, servingSize, nutritionFacts }) => {
+const FoodDetails: React.FC<Props> = ({ id, name, calories, servingSize, nutritionFacts, token }) => {
+    const { statement, deleteFood } = useDeleteFood(token)
+
     return (
         <div className="FoodDetails">
             <div className="FoodDetails__Name">{name}</div>
@@ -33,6 +37,14 @@ const FoodDetails: React.FC<Props> = ({ id, name, calories, servingSize, nutriti
                     <div className="FoodDetails__NutritionFacts__Item">Potassium: {nutritionFacts.potassium.measurment}{nutritionFacts.potassium.unit}</div>
                 </div>
             </div>
+
+            <button 
+                type="button" 
+                className="FoodDetails_Button"
+                onClick={() => deleteFood(id)}
+            >
+                { statement }
+            </button>
         </div>
     )
 }

@@ -17,7 +17,7 @@ export const HomeView: React.FC = () => {
             {
                 foods.map( food => (
                     <div key={ `food-${food.id}` } className="FoodView">
-                        <FoodDetails {...food} />    
+                        <FoodDetails {...food} token={localStorage.getItem("token") || ""}/>    
                     </div>
                 ) )
             }

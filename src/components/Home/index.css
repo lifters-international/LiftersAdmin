@@ -109,6 +109,17 @@
     overflow: auto;
 }
 
+.FoodDetails_Button {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: dodgerblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .OverWriteFormContainer {
     margin: none;
     margin-top: 20%;
