@@ -13,3 +13,9 @@ export * from "./AdminCreateFood";
 export * from "./GetFood";
 
 export * from "./deleteFood";
+
+export * from "./makeAnnoucements";
+
+export * from "./GetAnnoucements";
+
+export * from "./editAnnoucement";

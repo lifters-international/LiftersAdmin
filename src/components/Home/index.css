@@ -41,13 +41,32 @@
     color: #000;
 }
 
-.home {
+.HomeContainer {
+    display: grid;
+    grid-template-rows: repeat(2, 1%);
+    background: white;
+    width: 98%;
+    max-height: 50vh;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.HomeFoodContainer h1 {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: -1vh;
+}
+
+.homeFood {
     display: grid;
     grid-template-columns: repeat(9, 200px);
-    height: 99vh;
-    width: 100vw;
+    width: 97vw;
     margin-top: 8vh;
-    overflow-y: auto;
 }
 
 .selection-label-input-div {
@@ -133,3 +152,19 @@
     margin: none;
     margin-top: 20%;
 }
+
+.CreateAnnouncementForm {
+    width: 80vw;
+}
+
+.CreateAnnouncementForm__QuillContainer {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+    width: 80vw;
+    height: 70vh;
+}
+
