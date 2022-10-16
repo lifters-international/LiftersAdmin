@@ -27,5 +27,3 @@ export * from "./UserSubscriptionInfor";
 export * from "./AdminUser";
 
 export * from "./Food";
-
-export * from "./Annoucement";
