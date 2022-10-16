@@ -4,6 +4,7 @@ import { LoggedInLayout } from "../LoggedInLayout";
 
 import { CreateAdminView } from "./CreateAdminView";
 import { CreateFoodView } from "./CreateFoodView";
+import { CreateAnnoucement } from "./CreateAnnoucement";
 import { HomeView } from "./HomeView";
 
 import "./index.css"
@@ -23,6 +24,9 @@ export const Home: React.FC = () => {
                     <button type="button" className="header-content-button" onClick={() => setCurrentView("Create Food")}>
                         Create Food
                     </button>
+                    <button type="button" className="header-content-button" onClick={() => setCurrentView("Create Annoucement")}>
+                        Create Annoucement
+                    </button>
                     <button  type="button" className="header-content-button">
                         LogOut
                     </button>
@@ -36,6 +40,8 @@ export const Home: React.FC = () => {
                     <CreateAdminView />
                 ) : currentView === "Create Food" ? (
                     <CreateFoodView />
+                ) : currentView === "Create Annoucement" ? (
+                    <CreateAnnoucement token={localStorage.getItem("token") || ""}/>
                 ) : null
 
             }
